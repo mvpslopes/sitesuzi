@@ -152,7 +152,7 @@ main { counter-reset: chapter; }
   z-index: 0;
   pointer-events: none;
 }
-.about__content, .why__content { position: relative; }
+.about__content, .why__content, .dev__content { position: relative; }
 
 .shape-cut { border-radius: 14px 100px 14px 100px; }
 
@@ -440,6 +440,7 @@ main { counter-reset: chapter; }
 .nav-overlay.is-open .nav-overlay__link:nth-child(3) { transition-delay: 0.22s; }
 .nav-overlay.is-open .nav-overlay__link:nth-child(4) { transition-delay: 0.28s; }
 .nav-overlay.is-open .nav-overlay__link:nth-child(5) { transition-delay: 0.34s; }
+.nav-overlay.is-open .nav-overlay__link:nth-child(6) { transition-delay: 0.4s; }
 .nav-overlay__link:hover { color: var(--color-primary-light); padding-left: 12px; }
 .nav-overlay__index {
   font-family: var(--font-alt);
@@ -728,6 +729,52 @@ main { counter-reset: chapter; }
   border-color: var(--color-primary);
   color: var(--color-white);
   transform: rotate(-45deg);
+}
+
+/* ---------- Desenvolvimento web ---------- */
+.dev { background: var(--color-secondary); }
+.dev__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 60px;
+  align-items: start;
+}
+.dev__content > p { color: var(--color-text); margin-bottom: 28px; max-width: 480px; }
+.dev__content .btn { margin-top: 4px; }
+.dev__grid {
+  display: grid;
+  gap: 18px;
+}
+.dev-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px 26px;
+  transition: var(--transition);
+}
+.dev-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+.dev-card__num {
+  display: block;
+  font-family: var(--font-alt);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.dev-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+}
+.dev-card p {
+  font-size: 14.5px;
+  color: var(--color-muted);
+  line-height: 1.55;
 }
 
 /* ---------- Why (tráfego pago) ---------- */
@@ -1147,6 +1194,7 @@ main { counter-reset: chapter; }
   }
   .hero__inner,
   .about__inner,
+  .dev__inner,
   .why__inner,
   .cta__inner { grid-template-columns: 1fr; }
   .hero__media { order: -1; margin: 0 0 28px; }
